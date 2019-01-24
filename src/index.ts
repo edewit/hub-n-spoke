@@ -1,3 +1,3 @@
 
 
-export {HubAndSpoke, HubItem} from './hub-and-spoke';
+export {HubNSpoke, HubItem} from './hub-n-spoke';

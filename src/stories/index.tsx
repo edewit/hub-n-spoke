@@ -3,8 +3,9 @@ import '@patternfly/react-core/dist/styles/base.css';
 import {storiesOf} from '@storybook/react';
 import {HubNSpoke, HubItem} from '../hub-n-spoke';
 
-const items: HubItem[] = [
+export const items: HubItem[] = [
   {
+    id: 'hub1',
     title: 'Hub1',
     overview: {
       component: (<p>this is hub 1 overview</p>),
@@ -14,6 +15,7 @@ const items: HubItem[] = [
     }
   },
   {
+    id: 'hub2',
     title: 'Hub2',
     overview: {
       component: (<p>this is hub 2 overview</p>),
@@ -23,6 +25,7 @@ const items: HubItem[] = [
     }
   },
   {
+    id: 'hub3',
     title: 'Hub3',
     overview: {
       component: (<p>this is hub 3 overview</p>),

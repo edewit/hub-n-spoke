@@ -6,6 +6,7 @@ import { ReactElement, useContext, useState } from 'react';
 import './hub-n-spoke.scss';
 
 export interface HubItem {
+  id: string;
   title: string;
   overview: {
     component: ReactElement<any>;
@@ -39,7 +40,7 @@ export function HubOverviewCard(props: HubItem) {
           {props.title}
         </h1>
         <div className="hub-and-spoke-nav">
-          <Button variant="plain" aria-label="Edit" onClick={onEdit}>
+          <Button variant="plain" aria-label={`edit-${props.id}`} onClick={onEdit}>
             <EditIcon/>
           </Button>
         </div>
@@ -53,6 +54,7 @@ export function HubOverviewCard(props: HubItem) {
 
 interface HubFormCardProps {
   title: string;
+  id: string;
   children: React.ReactNode;
 }
 
@@ -70,7 +72,7 @@ function HubFormCard(props: HubFormCardProps) {
           {props.title}
         </h1>
         <div className="hub-and-spoke-nav">
-          <Button variant="plain" aria-label="Edit" onClick={onClose}>
+          <Button variant="plain" aria-label={`close-${props.id}`} onClick={onClose}>
             <WindowCloseIcon />
           </Button>
         </div>
@@ -104,7 +106,7 @@ export function HubNSpoke(props: HubAndSpokeProps) {
     <HubContext.Provider value={hub}>
       <Grid className="hub-and-spoke-container" gutter={'sm'}>
         {hub.selected ? (
-            <HubFormCard title={hub.selected.title}>
+            <HubFormCard id={hub.selected.id} title={hub.selected.title}>
               {hub.selected.form.component}
             </HubFormCard>
         ) : props.items.map((item, i) => (<HubOverviewCard {...item} key={i} />))}
