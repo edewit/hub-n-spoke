@@ -1,7 +1,7 @@
 import React from 'react';
 import '@patternfly/react-core/dist/styles/base.css';
 import {storiesOf} from '@storybook/react';
-import {HubAndSpoke, HubItem} from '../hub-and-spoke';
+import {HubNSpoke, HubItem} from '../hub-n-spoke';
 
 const items: HubItem[] = [
   {
@@ -34,7 +34,7 @@ const items: HubItem[] = [
   }
 ];
 
-storiesOf('HubAndSpoke', module)
+storiesOf('HubNSpoke', module)
   .add('simple', () => (
-    <HubAndSpoke items={items}/>
+    <HubNSpoke items={items}/>
   ));
