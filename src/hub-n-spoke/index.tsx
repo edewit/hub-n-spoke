@@ -23,7 +23,7 @@ interface Hub {
   close();
 }
 
-const HubContext = React.createContext<Hub | undefined>(undefined);
+export const HubContext = React.createContext<Hub | undefined>(undefined);
 
 export function HubOverviewCard(props: HubItem) {
   const hub = useContext(HubContext);

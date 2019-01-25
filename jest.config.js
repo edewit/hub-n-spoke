@@ -3,5 +3,6 @@ module.exports = {
   testEnvironment: 'node',
   moduleNameMapper: {
     "\\.(scss)|(css)$": "identity-obj-proxy"
-  }
+  },
+  testMatch: [ "**/?(*.)+(spec).ts?(x)" ]
 };

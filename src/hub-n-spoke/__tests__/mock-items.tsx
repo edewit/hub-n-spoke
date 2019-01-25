@@ -1,9 +1,7 @@
-import React from 'react';
-import '@patternfly/react-core/dist/styles/base.css';
-import {storiesOf} from '@storybook/react';
-import {HubNSpoke, HubItem} from '../hub-n-spoke';
+import {HubItem} from "../index";
+import * as React from "react";
 
-export const items: HubItem[] = [
+export const mockItems: HubItem[] = [
   {
     id: 'hub1',
     title: 'Hub1',
@@ -36,8 +34,3 @@ export const items: HubItem[] = [
     }
   }
 ];
-
-storiesOf('HubNSpoke', module)
-  .add('simple', () => (
-    <HubNSpoke items={items}/>
-  ));
