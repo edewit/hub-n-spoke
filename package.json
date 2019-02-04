@@ -16,7 +16,8 @@
     "react": "next",
     "react-docgen-typescript-loader": "3.0.1",
     "react-dom": "next",
-    "typescript": "3.2.4"
+    "typescript": "3.2.4",
+    "launcher-client": "*"
   },
   "scripts": {
     "build": "tsc && tsc -m es6 --outDir build/dist-esm && webpack -d",
